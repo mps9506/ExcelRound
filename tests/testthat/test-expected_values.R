@@ -11,13 +11,25 @@ logseq <- function(x1, x2, n=100) {
   exp(x)
 }
 
-context("xl_round returns expected values")
+context("xl_rounds up from 5")
 
 testthat::test_that("Return expect values", {
   x <- logseq(1e-20, 1e20, 41)
   expected <- x + 1
 
   object <- xl_round(x+0.5, 0)
+
+  testthat::expect_equal(object, expected)
+})
+
+
+context("xl_rounds down from 4")
+
+testthat::test_that("Return expect values", {
+  x <- logseq(1e-20, 1e20, 41)
+  expected <- x
+
+  object <- xl_round(x+0.49, 0)
 
   testthat::expect_equal(object, expected)
 })
