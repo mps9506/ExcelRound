@@ -29,3 +29,13 @@ Note that this function adds a very small amount to `x` which scales
 with the number of digits to the left of the decimal point. It is
 possible that rounding might be incorrect above 1E15 or 1E-15. See
 <https://stackoverflow.com/a/59933065/4488436> for details.
+
+``` r
+devtools::test(reporter = "summary")
+#> Loading ExcelRound
+#> Testing ExcelRound
+#> xl_rounds up from 5: .
+#> xl_rounds down from 4: .
+#> 
+#> == DONE =====================================================
+```
