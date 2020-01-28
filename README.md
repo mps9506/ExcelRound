@@ -24,3 +24,8 @@ xl_round(.5 + -2:4)
 ```
 
 <img src="man/figures/README-fig1.png" width="30%" />
+
+Note that this function adds a very small amount to `x` which scales
+with the number of digits to the left of the decimal point. It is
+possible that rounding might be incorrect above 1E15 or 1E-15. See
+<https://stackoverflow.com/a/59933065/4488436> for details.
